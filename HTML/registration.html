@@ -1,86 +1,84 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Forms</title>
-    <link rel="stylesheet" href="style1.css" />
-  </head>
-  <body>
-    <h1 class="c1">Registration Form</h1>
-    <marquee><h2 class="c2">Fill All The Details Below</h2></marquee>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="icon" href="download.png">
+    <link rel="stylesheet" href="../CSS/style2.css">
+    
+</head>
+<body>
 
+<div class="form-container">
+    <h1>Register Here</h1>
     <form>
-      <div class="form-group">
-        <label for="fname">First Name:</label>
-        <input id="fname" type="text" placeholder="Enter Your First Name">
-      </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" class="input-field" placeholder="Enter your name">
+        </div>
 
-      <div class="form-group">
-        <label for="lname">Last Name:</label>
-        <input id="lname" type="text" placeholder="Enter Your Last Name">
-      </div>
+        <div class="form-group">
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" class="input-field" placeholder="Enter your mobile number">
+        </div>
 
-      <div class="form-group">
-        <label for="email">Email Address:</label>
-        <input id="email" type="email" placeholder="Enter your Email address">
-      </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="input-field" placeholder="Enter your email">
+        </div>
 
-      <div class="form-group">
-        <label for="date">Enter Date:</label>
-        <input id="date" type="date">
-      </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" class="input-field"> </div>
 
-      <div class="form-group">
-        <label for="username">Choose a Username:</label>
-        <input id="username" type="text" placeholder="Enter your username">
-      </div>
+        <div class="form-group">
+            <label>Gender:</label>
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" id="male" name="gender">
+                    <label for="male">Male</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="female" name="gender">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+        </div>
 
-      <div class="form-group">
-        <label for="number">Enter Your Number:</label>
-        <input id="number" type="tel" placeholder="Enter your number">
-      </div>
+        <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea id="address" class="input-field" placeholder="Enter your current address"></textarea>
+        </div>
 
-      <div class="form-group">
-        <label for="gender">Gender:</label>
-        <select id="gender" required>
-          <option value="">--Select--</option>
-          <option value="male">Male</option>
-          <option value="Female">Female</option>
-        </select>
-      </div>
+        <div class="form-group">
+            <label for="branch">Branch:</label>
+            <select id="branch" class="input-field">
+                <option value="" disabled selected>CSE</option>
+                <option value="cse">CSE</option>
+                <option value="ece">ECE</option>
+                <option value="me">ME</option>
+                <option value="ce">CE</option>
+            </select>
+        </div>
 
-      <div class="form-group">
-        <label>Subscription Plan:</label>
-        <label><input type="radio" name="plan" value="basic"> Basic</label>
-        <label><input type="radio" name="plan" value="paid"> Paid</label>
-        <label><input type="radio" name="plan" value="pro"> Pro</label>
-        <label><input type="radio" name="plan" value="pro"> Paid + Pro</label>
-      </div>
+        <div class="form-group">
+            <label for="semester">Semester:</label>
+            <select id="semester" class="input-field">
+                <option value="" disabled selected>I</option>
+                <option value="1">I</option>
+                <option value="2">II</option>
+                <option value="3">III</option>
+                <option value="4">IV</option>
+            </select>
+        </div>
 
-      <div class="form-group">
-        <label for="country">Choose Your Country:</label>
-        <select id="country" name="countries">
-          <option value="india">India</option>
-          <option value="canada">Canada</option>
-          <option value="newyork">New York</option>
-          <option value="italy">Italy</option>
-          <option value="amsterdam">Amsterdam</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label>Courses:</label>
-        <label><input type="checkbox" name="courses" value="BTECH"> BTECH</label>
-        <label><input type="checkbox" name="courses" value="MTECH"> MTECH</label>
-        <label><input type="checkbox" name="courses" value="BCA"> BCA</label>
-        <label><input type="checkbox" name="courses" value="MCA"> MCA</label>
-      </div>
-
-      <div class="form-group">
-        <label for="fileupload">Upload Your File:</label>
-        <input type="file" id="fileupload">
-      </div>
-
-      <input type="submit" value="Submit">
+        <div class="button-group">
+            <button type="submit" class="btn btn-register">Register</button>
+            <button type="reset" class="btn btn-reset">Reset</button>
+        </div>
     </form>
-  </body>
+</div>
+
+</body>
 </html>
