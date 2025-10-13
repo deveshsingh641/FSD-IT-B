@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function addpara() {
+        const targetDivs = document.querySelectorAll(".para1");
+
+        targetDivs.forEach(div => {
+            const para = document.createElement("p");
+            para.textContent = "This is a new Paragraph.";
+            para.style.color = "blue";
+            div.appendChild(para);
+        });
+    }
+</script>
+
+<body>
+    <button onclick="addpara()">Add Para</button>
+    <div class="para1"></div>
+    <div class="para1"></div>
+    <div class="para1"></div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+const child = document.createElement("div");
+child.class = "card";
+const image = document.createElement("img");
+image.src ="download.jpeg";
+image.width = "150";
+image.height = "150";
+const h4 = document.createElement("h4");
+h4.innerText = "Price : 350/-";
+child.appendChild(image);
+child.appendChild(h4);
+document.body.appendChild(child);
