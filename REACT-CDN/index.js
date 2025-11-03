@@ -1,36 +1,50 @@
 function Book(props) {
   const image = React.createElement("img", {
     src: props.image,
-    width: 150,
-    height: 150,
+    width: 180,
+    height: 180,
     alt: "Book Image"
   });
 
-  const h4 = React.createElement("h4", null, "Price: " + props.price + "/-");
-  const child = React.createElement("div", { className: "card" }, image, h4);
-  return child;
+  const title = React.createElement("h3", null, "Title: " + props.title);
+  const price = React.createElement("h4", null, "Price: ₹" + props.price + "/-");
+  const btn = React.createElement("button", null, "ADD TO CART");
+
+  const details = React.createElement(React.Fragment, null, title, price, btn);
+  return React.createElement("div", { className: "card" }, image, details);
 }
 
 const books = [
   {
-    image: "https://images-na.ssl-images-amazon.com/images/I/81drfTT9ZfL.jpg", 
-    price: 235
+    title: "Physics",
+    price: 351,
+    image: "https://images-na.ssl-images-amazon.com/images/I/81drfTT9ZfL.jpg"
   },
   {
-    image: "https://images-na.ssl-images-amazon.com/images/I/71aFt4+OTOL.jpg",
-    price: 245
+    title: "Chemistry",
+    price: 420,
+    image: "https://images-na.ssl-images-amazon.com/images/I/71aFt4+OTOL.jpg"
   },
   {
-    image: "https://images-na.ssl-images-amazon.com/images/I/81iqZ2HHD-L.jpg",
-    price: 335
+    title: "Mathematics",
+    price: 499,
+    image: "https://images-na.ssl-images-amazon.com/images/I/81iqZ2HHD-L.jpg"
   }
 ];
 
+
+const bookElements = books.map(book =>
+  React.createElement(Book, {
+    title: book.title,
+    price: book.price,
+    image: book.image
+  })
+);
+
+
+const bookRow = React.createElement("div", { className: "book-row" }, ...bookElements);
+
+
 const parent = document.getElementById("root");
 const root = ReactDOM.createRoot(parent);
-
-// ✅ render all books
-const bookElements = books.map(book =>
-  React.createElement(Book, { image: book.image, price: book.price })
-);
-root.render(React.createElement(React.Fragment, null, ...bookElements));
+root.render(bookRow);

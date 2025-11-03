@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "parcel": "^2.16.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "name": "fsd-it-b",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deveshsingh641/FSD_IT_B.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deveshsingh641/FSD_IT_B/issues"
+  },
+  "homepage": "https://github.com/deveshsingh641/FSD_IT_B#readme"
+}
