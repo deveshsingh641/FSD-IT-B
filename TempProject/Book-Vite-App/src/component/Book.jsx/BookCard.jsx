@@ -5,12 +5,6 @@ function BookCard({ title, author, price }) {
 
   const handleRate = (value) => setRating(value);
 
-  const starStyle = (index) => ({
-    color: index <= rating ? "gold" : "#ccc",
-    cursor: "pointer",
-    fontSize: "20px"
-  });
-
   return (
     <div style={{
       border: "1px solid #ccc",
@@ -25,7 +19,13 @@ function BookCard({ title, author, price }) {
       <p><strong>Price:</strong> ₹{price}</p>
       <div>
         {[1, 2, 3, 4, 5].map((num) => (
-          <span key={num} onClick={() => handleRate(num)} style={starStyle(num)}>★</span>
+          <span
+            key={num}
+            onClick={() => handleRate(num)}
+            style={{ color: num <= rating ? "gold" : "#ccc", cursor: "pointer", fontSize: "18px" }}
+          >
+            ★
+          </span>
         ))}
       </div>
     </div>
