@@ -1,19 +1,29 @@
-import React from 'react'
-import Book from './component/Book.jsx/Book'
-import Header from './component/Book.jsx/Header'
-import footer from './component/Book.jsx/footer'
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import BookCard from "./components/BookCard";
+import SearchBar from "./components/SearchBar";
+import booksData from "./data/books";
 
-const App = () => {
+function App() {
+  const [search, setSearch] = useState("");
+
+  const filteredBooks = booksData.filter((book) =>
+    book.title.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div>
-      <Header></Header>
-      <div className = "linear">
-      <Book/>
-       <Book/>
-        <Book/></div>
-        <footer></footer>
+      <Navbar />
+      <SearchBar onSearch={setSearch} />
+      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+        {filteredBooks.map((book) => (
+          <BookCard key={book.id} {...book} />
+        ))}
+      </div>
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
