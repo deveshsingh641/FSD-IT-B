@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>React CDN Example</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-image: linear-gradient(120deg, #7af0a5, #58c2f7);
+    }
+
+    .book-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .card {
+      background-color: gold;
+      color: blue;
+      border: 2px solid green;
+      border-radius: 10px;
+      width: 200px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    img {
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center">Book Store</h1>
+  <div id="root"></div>
+
+  <!-- React CDN -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- Your JavaScript -->
+  <script src="index.js"></script>
+</body>
+</html>
