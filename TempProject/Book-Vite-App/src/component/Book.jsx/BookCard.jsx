@@ -33,3 +33,22 @@ function BookCard({ title, author, price }) {
 }
 
 export default BookCard;
+
+/**
+ * BookCard Component
+ * --------------------
+ * Displays a single book card with title, author, and price details.
+ * Features:
+ *  - Star rating system with local state
+ *  - Responsive inline styling for layout consistency
+ *  - Dynamically colored stars (gold for rated, gray for unrated)
+ *  - Can easily extend to show more properties like genre, rating count, etc.
+ *
+ * Notes:
+ *  This component demonstrates:
+ *  - React useState hook usage
+ *  - Event handling (onClick)
+ *  - Array mapping for dynamic UI rendering
+ *  - Inline conditional styling based on component state
+ */
+
