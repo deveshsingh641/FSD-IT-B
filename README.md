@@ -1,15 +1,11 @@
-# Book Vite App 📚
+## Technical Overview
 
-A simple React + Vite app for browsing and filtering books.
+This project demonstrates:
+- React component composition
+- State management using React Hooks
+- Local storage persistence
+- Data filtering and sorting logic
+- Basic data analytics (average price, top-rated books)
+- CSS styling and responsive layout design
 
-## Features
-- Book listing using reusable components
-- Search and filter functionality
-- Responsive design
-- Dark mode toggle
-- Built with React + Vite
-
-## Setup
-```bash
-npm install
-npm run dev
+### File Structure
